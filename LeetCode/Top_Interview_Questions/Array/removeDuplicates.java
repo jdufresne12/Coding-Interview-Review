@@ -2,7 +2,7 @@
 //John Dufresne 01/06/2024
 //Remove Duplicates from an int array, IN PLACE, thats already been sorted in acsending order.
 //If they were not sorted i would first sort using mergesort then perform my function below.
-import java.util.Arrays; //for testing
+//import java.util.Arrays; //for testing
 
 public class RemoveDuplicates {
     public  static int removeDuplicates(int[] nums) {
