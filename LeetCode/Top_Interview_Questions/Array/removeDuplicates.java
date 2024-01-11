@@ -4,8 +4,8 @@
 //If they were not sorted i would first sort using mergesort then perform my function below.
 import java.util.Arrays; //for testing
 
-public class removeDuplicates {
-    public static int removeDuplicates(int[] nums) {
+public class RemoveDuplicates {
+    public  static int removeDuplicates(int[] nums) {
         int count = 0;
         if (nums.length == 1)
             return 1;
