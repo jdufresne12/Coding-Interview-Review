@@ -33,8 +33,12 @@ public class RemoveDuplicates {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 1, 2}; // Input array
+        int[] nums = {1, 1, 2, 2, 3}; // Input array
         int k = removeDuplicates(nums); // Calls your implementation
-        System.out.println(k);
+        int i=0;
+        while(i < nums.length){
+            System.out.print(nums[i]);
+            i++;
+        }
     }
 }
