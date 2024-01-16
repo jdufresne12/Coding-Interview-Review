@@ -17,7 +17,7 @@ public class RotateArray {
         for(int i = 0; i < size; i++){
             temp_nums[(i+k) % (size)] = nums[i];
         }
-        toString(temp_nums);
+        System.arraycopy(temp_nums, 0, nums, 0, size);
     }
     public static void toString(int[] nums){
         for(int i = 0; i < nums.length; i++){
@@ -29,6 +29,7 @@ public class RotateArray {
         int nums[] = {1,2,3,4,5,6,7};
         int k = 3;
         rotateArray(nums, k);
+        toString(nums);
     }
 }
 /*
