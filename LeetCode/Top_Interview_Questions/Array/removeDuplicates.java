@@ -36,7 +36,7 @@ public class RemoveDuplicates {
         int[] nums = {1, 1, 2, 2, 3}; // Input array
         int k = removeDuplicates(nums); // Calls your implementation
         int i=0;
-        while(i < nums.length){
+        while(i < k){
             System.out.print(nums[i]);
             i++;
         }
