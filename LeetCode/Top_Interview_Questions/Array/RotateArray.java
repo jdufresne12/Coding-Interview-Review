@@ -17,6 +17,7 @@ public class RotateArray {
         for(int i = 0; i < size; i++){
             temp_nums[(i+k) % (size)] = nums[i];
         }
+
         System.arraycopy(temp_nums, 0, nums, 0, size);
     }
     public static void toString(int[] nums){
