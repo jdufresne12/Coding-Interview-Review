@@ -3,6 +3,9 @@
  * 
  *  Input: nums = [1,2,3,1]
     Output: true
+
+    I used a merge sort to first sort items together, also checking if we compare 2 of the same numbers while sorting for optimized runtime.
+    If not caught we still iteratively check the entire array for duplicates. 
  */
 
 public class ContainsDuplicate{
@@ -18,7 +21,7 @@ public class ContainsDuplicate{
         for(int j = 0; j < n2; j++)
             R[j] = arr[middle + 1 + j];
 
-        int i = 0, j = 0, k = left;
+        int i = 0, j = 0, k = left, flag= 0;
         
         while(i < n1 && j < n2){
             if(L[i] < R[j]){
@@ -29,8 +32,13 @@ public class ContainsDuplicate{
                 arr[k] = R[j];
                 j++;
             }
-            else
-                return 1;
+            else{
+                arr[k] = R[j];
+                arr[++k] = L[i];
+                i++;
+                j++;
+                flag = 1;
+            }
             k++;
         }
         while(i < n1){
@@ -43,7 +51,7 @@ public class ContainsDuplicate{
             j++;
             k++;
         }
-        return 0;
+        return flag;
     }
 
     public int sort(int[] nums, int left, int right){
@@ -61,6 +69,7 @@ public class ContainsDuplicate{
 
     public boolean containsDuplicate(int[] nums){
         int ans = sort(nums, 0, nums.length-1);
+        printArray(nums);
         if(ans == 1)
             return true;
         else{
@@ -70,8 +79,14 @@ public class ContainsDuplicate{
             return false; 
         }       
     }
+    static void printArray(int arr[]){
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + ", ");
+        }  
+        System.out.println();
+    }
     public static void main(String[] args) {
-        int[] nums = {2,14,18,22,22};
+        int[] nums = {399,811,-220,962,-527,-690,-830,-639,-690,-524,349,-522,-975,-6,703,207,-626,-461,-422,-991,-701,-141,95,-243};
         ContainsDuplicate ex = new ContainsDuplicate();
         System.out.println(ex.containsDuplicate(nums));
     }
