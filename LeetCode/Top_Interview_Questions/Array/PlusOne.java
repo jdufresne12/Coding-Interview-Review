@@ -21,42 +21,40 @@ import java.util.Arrays;
 public class PlusOne{
     public static int[] plusOne(int[] digits) {
         int len = digits.length;
-        if(digits[len-1] != 9){
+        if(digits[len-1] != 9){ //If last digit isn't 9 just increment
             digits[len-1] += 1;
             return digits;
         }
-        else if(digits[0] != 9){
-            for(int i = len-1; i >= 0; i++){
-                if(digits[i] != 9){
+        else {
+            for(int i = len-1; i >= 0; i--){
+                if(i == 0 && digits[i] == 9){           //If were at last digit and its 9 we need to increase array size 
+                    int new_digits[] = new int[len+1];
+                    new_digits[0] = 1;
+                    return new_digits;
+                }
+                if(digits[i] != 9){ // If its not 9 increment by 1 and return
                     digits[i] += 1;
                     return digits;
                 } 
                 else
-                    digits[i] = 0;
+                    digits[i] = 0; //Its 9 so making it 0 and move to next digit
             }
             return digits;
         }
-        else{
-            int new_digits[] = Arrays.copyOf(digits, digits.length+1);
-            for(int i = len-1; i >= 0; i++){
-                if(new_digits[i] != 9){
-                    new_digits[i] += 1;
-                    return new_digits;
-                } 
-                else
-                    new_digits[i] = 0;
-            }
-            return new_digits;
-        }
     }
     public static void toString(int[] digits){
-
+        System.out.print("[");
+        for(int i = 0; i < digits.length; i++){
+            if(i == digits.length - 1)
+                System.out.print(digits[i]);
+            else
+                System.out.print(digits[i] + ",");
+        }
+        System.out.print("]");
     }
     public static void main(String[] args) {
-        int digits[] = {1,9};
-        int new_digits[] = Arrays.copyOf(digits, digits.length+1);
-        
-        // toString(new_digits);
+        int digits[] = {9,6,9};        
+        //System.out.println(digits.length);
         toString(plusOne(digits));
     }
 }
