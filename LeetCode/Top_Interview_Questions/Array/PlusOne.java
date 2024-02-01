@@ -50,14 +50,7 @@ public class PlusOne{
         }
     }
     public static void toString(int[] digits){
-        System.out.print("[");
-        for(int i = 0; i < digits.length; i++){
-            if(i == digits.length - 1)
-                System.out.print(digits[i]);
-            else
-                System.out.print(digits[i] + ",");
-        }
-        System.out.print("]");
+
     }
     public static void main(String[] args) {
         int digits[] = {1,9};
