@@ -12,10 +12,35 @@
 */ 
 
 public class MoveZeroes{
-    public void moveZeroes(int[] nums) {
-        
+    public static void moveZeroes(int[] nums) {
+        int size = nums.length-1;
+        int i = 0;
+        while(i < size){
+            if(nums[i] != 0)
+                i++;
+            else{
+                for(int j = i; j < size; j++){
+                    nums[j] = nums[j+1];
+                    nums[j+1] = 0;
+                }
+                --size;
+            }
+        }
+    }
+    public static void toString(int[] nums){
+        System.out.print("[");
+        for(int i = 0; i < nums.length; i++){
+            if(i == nums.length - 1)
+                System.out.print(nums[i]);
+            else
+                System.out.print(nums[i] + ",");
+        }
+        System.out.print("]");
     }
     public static void main(String[] args) {
-        
+        int nums[] = {0};
+        moveZeroes(nums);
+        toString(nums);
+
     }
 }
