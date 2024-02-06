@@ -14,9 +14,35 @@
  */
 public class TwoSum {
     public static int[] twoSum(int[] nums, int target) {
-        return nums;
+        //Holds the 2 numbers that sum to target
+        int[] sum = new int[2];
+
+        for(int i = 0; i < nums.length-1; i++){
+            for(int j = i+1; j < nums.length; j++){
+                if((nums[i] + nums[j]) == target){
+                    sum[0] = i;
+                    sum[1] = j;
+                    return sum;
+                }
+            }
+        }
+
+        return sum;
+    }
+    public static void toString(int[] nums){
+        System.out.print("[");
+        for(int i = 0; i < nums.length; i++){
+            if(i == nums.length - 1)
+                System.out.print(nums[i]);
+            else
+                System.out.print(nums[i] + ",");
+        }
+        System.out.print("]");
     }
     public static void main(String[] args) {
-        
+        int nums[] = {2,7,11,15};
+        int target = 9;
+
+        toString(twoSum(nums, target));
     }
 }
