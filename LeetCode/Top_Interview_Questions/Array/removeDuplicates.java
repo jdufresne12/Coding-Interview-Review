@@ -5,7 +5,7 @@
 //import java.util.Arrays; //for testing
 
 public class RemoveDuplicates {
-    public  static int removeDuplicates(int[] nums) {
+    public static int removeDuplicates(int[] nums) {
         int count = 0;
         if (nums.length == 1)
             return 1;
