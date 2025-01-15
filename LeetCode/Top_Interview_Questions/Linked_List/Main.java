@@ -50,6 +50,8 @@ public class Main {
         // System.out.println("After deletion:");
         // printLinkedList(head1);
 
+        //-----------------------------------------------------------------------------
+
         /* 
             Remove Nth Node From End of List
             Input: head = [1,2,3,4,5], n = 2
@@ -58,18 +60,50 @@ public class Main {
         // int[] values = {1,2};
         // ListNode head = createLinkedList(values);
         // Solution solution = new Solution();
-
         // System.out.println("Before Nth from end deletion");
         // printLinkedList(head);
-
         // head = solution.removeNthFromEnd(head, 1);
         // System.out.println("After Nth from end deletion");
         // printLinkedList(head);
 
+        //-----------------------------------------------------------------------------
+
         /* 
-            Remove Nth Node From End of List
-            Input: head = [1,2,3,4,5], n = 2
-            Output: [1,2,3,5] 
+            Reverse a Linked List 
+            Input: head = [1,2,3,4,5]
+            Output: [5,4,3,2,1]
+        */
+        int[] values = {1,2,3,4,5};
+        ListNode head = createLinkedList(values);
+        Solution solution = new Solution();
+        System.out.println("Before Reverse");
+        printLinkedList(head);
+        head = solution.reverseList(head);
+        System.out.println("After Reverse");
+        printLinkedList(head);
+
+        //-----------------------------------------------------------------------------
+
+        /* 
+            Merge 2 Sorted Lists 
+            Input: head = [1,2,3,4,5]
+            Output: [5,4,3,2,1]
+        */
+
+        //-----------------------------------------------------------------------------
+
+        /* 
+            Palindrome Linked List 
+            Input: head = [1,2,3,4,5]
+            Output: [5,4,3,2,1]
+        */
+
+        //-----------------------------------------------------------------------------
+        
+        /* 
+            Linked List Cylce
+            Input: head = [1,2,3,4,5]
+            Output: [5,4,3,2,1]
         */
     }
 }
