@@ -36,17 +36,40 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // Test Case 1: [4,5,1,9], node = 5
-        int[] values1 = {4, 5, 1, 9};
-        ListNode head1 = createLinkedList(values1);
-        ListNode node_to_delete = findNode(head1, 5);
+        /* 
+            Delete Node 
+            Test Case 1: [4,5,1,9], node = 5 
+        */
+        // int[] values1 = {4, 5, 1, 9};
+        // ListNode head1 = createLinkedList(values1);
+        // ListNode node_to_delete = findNode(head1, 5);
+        // Solution node_1 = new Solution();
+        // System.out.println("Before deletion:");
+        // printLinkedList(head1);
+        // node_1.deleteNode(node_to_delete);
+        // System.out.println("After deletion:");
+        // printLinkedList(head1);
 
-        printLinkedList(head1);
+        /* 
+            Remove Nth Node From End of List
+            Input: head = [1,2,3,4,5], n = 2
+            Output: [1,2,3,5] 
+        */
+        // int[] values = {1,2};
+        // ListNode head = createLinkedList(values);
+        // Solution solution = new Solution();
 
-        Solution node_1 = new Solution();
-        node_1.deleteNode(node_to_delete);
+        // System.out.println("Before Nth from end deletion");
+        // printLinkedList(head);
 
-        System.out.println("After deletion:");
-        printLinkedList(head1);
+        // head = solution.removeNthFromEnd(head, 1);
+        // System.out.println("After Nth from end deletion");
+        // printLinkedList(head);
+
+        /* 
+            Remove Nth Node From End of List
+            Input: head = [1,2,3,4,5], n = 2
+            Output: [1,2,3,5] 
+        */
     }
 }
