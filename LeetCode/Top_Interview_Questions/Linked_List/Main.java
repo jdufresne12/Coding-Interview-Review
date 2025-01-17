@@ -73,23 +73,29 @@ public class Main {
             Input: head = [1,2,3,4,5]
             Output: [5,4,3,2,1]
         */
-        int[] values = {1,2,3,4,5};
-        ListNode head = createLinkedList(values);
-        Solution solution = new Solution();
-        System.out.println("Before Reverse");
-        printLinkedList(head);
-        head = solution.reverseList(head);
-        System.out.println("After Reverse");
-        printLinkedList(head);
+        // int[] values = {1,2,3,4,5};
+        // ListNode head = createLinkedList(values);
+        // Solution solution = new Solution();
+        // System.out.println("Before Reverse");
+        // printLinkedList(head);
+        // head = solution.reverseList(head);
+        // System.out.println("After Reverse");
+        // printLinkedList(head);
 
         //-----------------------------------------------------------------------------
 
         /* 
             Merge 2 Sorted Lists 
-            Input: head = [1,2,3,4,5]
-            Output: [5,4,3,2,1]
+            Input: list1 = [1,2,4], list2 = [1,3,4]
+            Output: [1,1,2,3,4,4]
         */
-
+        int[] list1 = {1,2,3,4}, list2 = {1};
+        ListNode head1 = createLinkedList(list1);
+        ListNode head2 = createLinkedList(list2);
+        Solution solution = new Solution();
+        System.out.println("Merged Lists");
+        printLinkedList(solution.mergeTwoLists(head1, head2));
+        
         //-----------------------------------------------------------------------------
 
         /* 
