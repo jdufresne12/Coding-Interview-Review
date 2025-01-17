@@ -131,4 +131,30 @@ public class Solution {
         
         return true;
     }
+
+    public boolean hasCycle(ListNode head) {
+        // Handle empty list or single node
+        if (head == null || head.next == null) {
+            return false;
+        }
+        
+        // Initialize two pointers: slow (tortoise) and fast (hare)
+        ListNode slow = head;
+        ListNode fast = head;
+        
+        // Move slow by 1 and fast by 2 steps
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            
+            // If they meet, there's a cycle
+            if (slow == fast) {
+                return true;
+            }
+        }
+        
+        // If fast reaches null, there's no cycle
+        return false;
+    }
+
 }

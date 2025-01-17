@@ -40,15 +40,15 @@ public class Main {
             Delete Node 
             Test Case 1: [4,5,1,9], node = 5 
         */
-        // int[] values1 = {4, 5, 1, 9};
-        // ListNode head1 = createLinkedList(values1);
-        // ListNode node_to_delete = findNode(head1, 5);
-        // Solution node_1 = new Solution();
-        // System.out.println("Before deletion:");
-        // printLinkedList(head1);
-        // node_1.deleteNode(node_to_delete);
-        // System.out.println("After deletion:");
-        // printLinkedList(head1);
+        int[] values1 = {4, 5, 1, 9};
+        ListNode head1 = createLinkedList(values1);
+        ListNode node_to_delete = findNode(head1, 5);
+        Solution node_1 = new Solution();
+        System.out.println("Before deletion:");
+        printLinkedList(head1);
+        node_1.deleteNode(node_to_delete);
+        System.out.println("After deletion:");
+        printLinkedList(head1);
 
         //-----------------------------------------------------------------------------
 
@@ -103,15 +103,15 @@ public class Main {
             Input: head = [1,2,2,1]
             Output: true    
         */
-        int[] list = {1,2,2,1};
-        ListNode head = createLinkedList(list);
-        Solution solution = new Solution();
-        if(solution.isPalindrome(head)) {
-            System.out.println("This linked list is a palindrome.");
-        }
-        else {
-            System.out.println("This linked list is not a palindrome.");
-        }    
+        // int[] list = {1,2,2,1};
+        // ListNode head = createLinkedList(list);
+        // Solution solution = new Solution();
+        // if(solution.isPalindrome(head)) {
+        //     System.out.println("This linked list is a palindrome.");
+        // }
+        // else {
+        //     System.out.println("This linked list is not a palindrome.");
+        // }    
 
         //-----------------------------------------------------------------------------
         
@@ -120,5 +120,13 @@ public class Main {
             Input: head = [1,2,3,4,5]
             Output: [5,4,3,2,1]
         */
+        // int[] list = {1,2,2,1};
+        // ListNode head = createLinkedList(list);
+        // Solution solution = new Solution();
+        // if(solution.hasCycle(head)) 
+        //     System.out.println("This linked list has a cycle.");
+        // else 
+        //     System.out.println("This linked list does not have a cycle.");
+        
     }
 }
