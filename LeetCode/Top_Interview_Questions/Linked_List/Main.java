@@ -89,20 +89,29 @@ public class Main {
             Input: list1 = [1,2,4], list2 = [1,3,4]
             Output: [1,1,2,3,4,4]
         */
-        int[] list1 = {1,2,3,4}, list2 = {1};
-        ListNode head1 = createLinkedList(list1);
-        ListNode head2 = createLinkedList(list2);
-        Solution solution = new Solution();
-        System.out.println("Merged Lists");
-        printLinkedList(solution.mergeTwoLists(head1, head2));
+        // int[] list1 = {1,2,3,4}, list2 = {1};
+        // ListNode head1 = createLinkedList(list1);
+        // ListNode head2 = createLinkedList(list2);
+        // Solution solution = new Solution();
+        // System.out.println("Merged Lists");
+        // printLinkedList(solution.mergeTwoLists(head1, head2));
         
         //-----------------------------------------------------------------------------
 
         /* 
             Palindrome Linked List 
-            Input: head = [1,2,3,4,5]
-            Output: [5,4,3,2,1]
+            Input: head = [1,2,2,1]
+            Output: true    
         */
+        int[] list = {1,2,2,1};
+        ListNode head = createLinkedList(list);
+        Solution solution = new Solution();
+        if(solution.isPalindrome(head)) {
+            System.out.println("This linked list is a palindrome.");
+        }
+        else {
+            System.out.println("This linked list is not a palindrome.");
+        }    
 
         //-----------------------------------------------------------------------------
         
