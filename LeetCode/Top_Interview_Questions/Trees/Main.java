@@ -31,7 +31,7 @@ public class Main {
             Input: root = [3,9,20,null,null,15,7]
             Output: 3
         */
-        int[] values = {3,9,20,0,0,0,7};
+        int[] values = {3,9,20,0,0,15,7};
         TreeNode root = createBinaryTree(values);
         Solution solution = new Solution();
         System.out.println(solution.maxDepth(root));

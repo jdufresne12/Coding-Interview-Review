@@ -10,4 +10,8 @@ class Solution {
 
         return Math.max(leftDepth, rightDepth) + 1;
     }
+
+    public boolean isValidBST(TreeNode root) {
+        return false;
+    }
 }
