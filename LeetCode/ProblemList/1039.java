@@ -1,4 +1,5 @@
 /*	
+	1039. Minimum Score Triangulation of Polygon
 	You have a convex n-sided polygon where each vertex has an integer value. You are given an integer array values where values[i] is the value of the ith vertex in clockwise order.
 
 	Polygon triangulation is a process where you divide a polygon into a set of triangles and the vertices of each triangle must also be vertices of the original polygon. Note that no other shapes other than triangles are allowed in the division. This process will result in n - 2 triangles.
@@ -25,34 +26,34 @@
 */
 
 class Solution {
-    	public int minScoreTriangulation(int[] values) {
-	        int n = values.length;
+	public int minScoreTriangulation(int[] values) {
+		int n = values.length;
 		int[][] dp = new int[n][n];
-		
-		for(int gap = 2; gap < n; gap++){
-			for(int i = 0; i + gap < n; i++){
+
+		for (int gap = 2; gap < n; gap++) {
+			for (int i = 0; i + gap < n; i++) {
 				int j = i + gap;
-				
-				if(gap == 2) {
+
+				if (gap == 2) {
 					dp[i][j] = values[i] * values[i + 1] * values[j];
 				} else {
 					dp[i][j] = Integer.MAX_VALUE;
-					
-					for(int k = i + 1; k < j; k++) {
+
+					for (int k = i + 1; k < j; k++) {
 						int score = (values[i] * values[k] * values[j]) + dp[i][k] + dp[k][j];
 						dp[i][j] = Math.min(dp[i][j], score);
 					}
 				}
 			}
 		}
-		
-		return dp[0][n-1];
+
+		return dp[0][n - 1];
 	}
-	
-	public static void main(String[] args){
+
+	public static void main(String[] args) {
 		Solution sol = new Solution();
-		
-		int[] values = {1, 2, 3};
-		System.out.print(sol.minScoreTriangulation(values)); 
+
+		int[] values = { 1, 2, 3 };
+		System.out.print(sol.minScoreTriangulation(values));
 	}
 }
