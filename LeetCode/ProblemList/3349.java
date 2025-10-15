@@ -1,5 +1,6 @@
+
 /*
-    3349. Adjacent Increasing ubaarays Detection 1
+    3349. Adjacent Increasing subarrays Detection 1
     Given an array nums of n integers and an integer k, determine whether there exist two adjacent subarrays of length k such that both subarrays are strictly increasing. Specifically, check if there are two subarrays starting at indices a and b (a < b), where:
 
     Both subarrays nums[a..a + k - 1] and nums[b..b + k - 1] are strictly increasing.
@@ -22,15 +23,16 @@ import java.util.*;
 
 class Solution {
     public boolean hasIncreasingSubarrays(List<Integer> nums, int k) {
-        if(nums.size() < k * 2) return false;
+        if (nums.size() < k * 2)
+            return false;
 
-        for(int a = 0; a <= nums.size() - 2 * k; a++) {
-            int b = a + k;  // b must be adjacent to a
+        for (int a = 0; a <= nums.size() - 2 * k; a++) {
+            int b = a + k; // b must be adjacent to a
 
             // Check if subarray starting at a is strictly increasing
             boolean firstIncreasing = true;
-            for(int i = a; i < a + k - 1; i++) {
-                if(nums.get(i) >= nums.get(i + 1)) {
+            for (int i = a; i < a + k - 1; i++) {
+                if (nums.get(i) >= nums.get(i + 1)) {
                     firstIncreasing = false;
                     break;
                 }
@@ -38,14 +40,14 @@ class Solution {
 
             // Check if subarray starting at b is strictly increasing
             boolean secondIncreasing = true;
-            for(int i = b; i < b + k - 1; i++) {
-                if(nums.get(i) >= nums.get(i + 1)) {
+            for (int i = b; i < b + k - 1; i++) {
+                if (nums.get(i) >= nums.get(i + 1)) {
                     secondIncreasing = false;
                     break;
                 }
             }
 
-            if(firstIncreasing && secondIncreasing) {
+            if (firstIncreasing && secondIncreasing) {
                 return true;
             }
         }
