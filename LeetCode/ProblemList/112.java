@@ -13,10 +13,6 @@ class Solution {
             return targetSum == 0;
         return hasPathSum(root.left, targetSum) || hasPathSum(root.right, targetSum);
     }
-
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-    }
 }
 
 // Definition for a binary tree node.
