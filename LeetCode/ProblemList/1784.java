@@ -5,12 +5,14 @@
 
 class Solution {
     public boolean checkOnesSegment(String s) {
-
+        if (s.length() == 1)
+            return true;
+        return !s.contains("01");
     }
 
     public static void main(String[] args) {
         Solution sol = new Solution();
         String s = "1001";
-        Sout
+        System.out.println(sol.checkOnesSegment(s));
     }
 }
